@@ -88,9 +88,24 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative bg-stone-900 text-white w-full h-[65vh] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&w=1200&q=80');">
-    <div class="absolute inset-0 bg-stone-950/40"></div>
+  <!-- Responsive Hero Section -->
+  <section class="relative bg-stone-900 text-white w-full h-[65vh] sm:h-[75vh] flex items-center justify-center overflow-hidden">
+    
+    <!-- Mobile Background Image (Clean performance on phones) -->
+    <div class="absolute inset-0 w-full h-full lg:hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?auto=format&fit=crop&w=1200&q=80');">
+      <div class="absolute inset-0 bg-stone-950/40"></div>
+    </div>
+
+    <!-- Desktop Looping Video Background (Hidden on mobile, active and playing on desktop) -->
+    <div class="absolute inset-0 w-full h-full hidden lg:block overflow-hidden z-0 pointer-events-none">
+      <video autoplay muted loop playsinline class="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 object-cover">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-snow-capped-mountains-41584-large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-stone-950/30"></div>
+    </div>
+
+    <!-- Hero Content -->
     <div class="relative z-10 text-center px-4">
       <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-2">Discover Jbel Ayachi</h1>
       <p class="text-sm sm:text-base text-stone-200 max-w-md mx-auto">Your gateway to the ultimate Atlas Mountain adventures.</p>
@@ -124,7 +139,7 @@
       mobileChevron.classList.toggle('rotate-180');
     });
 
-    // Desktop Click Backup Toggle (in case touch/hover acts quirky on tablets)
+    // Desktop Click Backup Toggle
     const desktopBtn = document.getElementById('desktop-dropdown-btn');
     const desktopMenu = document.getElementById('desktop-dropdown-menu');
 
