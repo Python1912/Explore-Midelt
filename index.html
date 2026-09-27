@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Midelt | Things to Do, Events, & Hotels | Midelt, Morocco's Official Travel Site</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ashevilleGreen: '#23382b',  /* Deep Forest Pine */
+            ashevilleAccent: '#c25e38',/* Warm Terracotta / Clay */
+            ashevilleSand: '#f7f5f0',  /* Warm Off-White Paper */
+            ashevilleDark: '#1c1917',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-stone-900 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- Top Utility Announcement Bar -->
+  <div class="bg-stone-900 text-stone-300 text-xs py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <i class="fa-solid fa-mountain-sun text-amber-500"></i>
+    <span>Welcome to Midelt • The Heartbeat of the Atlas Mountains • <a href="#guide" class="underline hover:text-white">Request Free Visitor Guide</a></span>
+  </div>
+
+  <!-- Header Styled Exactly Like ExploreAsheville -->
+  <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center gap-4">
+      
+      <!-- Logo & "Explore Midelt" Text -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-ashevilleGreen rounded-full flex items-center justify-center text-white text-xl font-bold shadow-sm group-hover:bg-stone-800 transition">
+          <i class="fa-solid fa-mountain"></i>
+        </div>
+        <div class="flex flex-col leading-none">
+          <span class="text-stone-900 text-2xl font-black tracking-tighter">Explore Midelt</span>
+          <span class="text-amber-700 text-[10px] font-extrabold uppercase tracking-widest mt-0.5">Official Travel Site</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-stone-800">
+        <a href="#" class="hover:text-amber-700 transition">Things to Do</a>
+        <a href="#" class="hover:text-amber-700 transition">Places to Stay</a>
+        <a href="#" class="hover:text-amber-700 transition">Places to go</a>
+        <a href="#" class="hover:text-amber-700 transition">Events</a>
+        <a href="#" class="hover:text-amber-700 transition">Plan Your Trip</a>
+      </nav>
+
+      <!-- Search & Language Actions -->
+      <div class="flex items-center gap-4">
+        <button class="hidden sm:flex items-center gap-2 text-xs font-bold text-stone-700 bg-stone-100 hover:bg-stone-200 px-3 py-2 rounded-full transition">
+          <i class="fa-solid fa-magnifying-glass text-stone-500"></i> Search
+        </button>
+        <button class="bg-ashevilleGreen hover:bg-stone-800 text-white text-xs font-bold px-4 py-2.5 rounded-full transition shadow-sm">
+          Book a Hotel
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner Section with Video Background -->
+  <section class="relative bg-stone-900 text-white overflow-hidden flex-1 min-h-[500px] flex items-center justify-center">
+    <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+      <video autoplay muted loop playsinline class="absolute w-full h-full object-cover opacity-90 scale-105">
+        <source src="093A3848.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-stone-950/20"></div>
+    </div>
+  </section>
+
+</body>
+</html>
