@@ -9,7 +9,7 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-white text-stone-900 font-sans antialiased">
+<body class="bg-white text-stone-900 font-sans antialiased flex flex-col min-h-screen">
 
   <!-- Top Announcement Bar -->
   <div class="bg-stone-900 text-stone-300 text-xs py-2 px-3 text-center">
@@ -34,22 +34,24 @@
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-6 text-sm font-bold text-stone-200">
         
-        <!-- Things to Do Dropdown -->
-        <div class="relative group">
-          <button class="flex items-center gap-1.5 hover:text-amber-400 py-2 focus:outline-none">
+        <!-- Things to Do Dropdown (Click & Hover) -->
+        <div class="relative group h-full flex items-center">
+          <button id="desktop-dropdown-btn" class="flex items-center gap-1.5 hover:text-amber-400 py-2 focus:outline-none">
             Things to Do <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 mt-0 w-64 bg-emerald-950 border border-emerald-900 rounded-lg shadow-xl py-2 hidden group-hover:block transition">
-            <a href="#" class="block px-4 py-2.5 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400">Hike Jbel Ayachi</a>
-            <a href="#" class="block px-4 py-2.5 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400">Discover Kasbahs</a>
-            <a href="#" class="block px-4 py-2.5 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400">Mines Tour Mibladen and Ahouli</a>
+          
+          <!-- Dropdown Container -->
+          <div id="desktop-dropdown-menu" class="absolute top-full left-0 w-72 bg-[#23382b] border border-emerald-900 rounded-b-lg shadow-2xl py-2 hidden group-hover:block">
+            <a href="#" class="block px-4 py-3 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400 border-b border-emerald-900/50">Hike Jbel Ayachi</a>
+            <a href="#" class="block px-4 py-3 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400 border-b border-emerald-900/50">Discover Kasbahs</a>
+            <a href="#" class="block px-4 py-3 text-xs text-stone-200 hover:bg-emerald-900 hover:text-amber-400">Mines Tour Mibladen and Ahouli</a>
           </div>
         </div>
 
-        <a href="#" class="hover:text-amber-400">Places to Stay</a>
-        <a href="#" class="hover:text-amber-400">Places to go</a>
-        <a href="#" class="hover:text-amber-400">Events</a>
-        <a href="#" class="hover:text-amber-400">Plan Your Trip</a>
+        <a href="#" class="hover:text-amber-400 py-2">Places to Stay</a>
+        <a href="#" class="hover:text-amber-400 py-2">Places to go</a>
+        <a href="#" class="hover:text-amber-400 py-2">Events</a>
+        <a href="#" class="hover:text-amber-400 py-2">Plan Your Trip</a>
       </nav>
 
       <!-- Buttons & Mobile Toggle -->
@@ -63,26 +65,26 @@
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
+    <!-- Mobile Dropdown Menu Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden bg-emerald-950 border-t border-emerald-900 px-4 py-4 space-y-3">
       
       <!-- Mobile Submenu for Things to Do -->
-      <div>
-        <button id="mobile-dropdown-btn" class="w-full flex justify-between items-center text-stone-200 hover:text-amber-400 font-semibold py-1 focus:outline-none">
+      <div class="border-b border-emerald-900/60 pb-2">
+        <button id="mobile-dropdown-btn" class="w-full flex justify-between items-center text-stone-200 hover:text-amber-400 font-semibold py-2 focus:outline-none">
           <span>Things to Do</span>
           <i class="fa-solid fa-chevron-down text-xs transition-transform" id="mobile-chevron"></i>
         </button>
-        <div id="mobile-submenu" class="hidden pl-4 mt-2 space-y-2 border-l border-emerald-800">
-          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1">Hike Jbel Ayachi</a>
-          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1">Discover Kasbahs</a>
-          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1">Mines Tour Mibladen and Ahouli</a>
+        <div id="mobile-submenu" class="hidden pl-4 mt-1 space-y-2 border-l border-emerald-800">
+          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1.5">Hike Jbel Ayachi</a>
+          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1.5">Discover Kasbahs</a>
+          <a href="#" class="block text-xs text-stone-300 hover:text-amber-400 py-1.5">Mines Tour Mibladen and Ahouli</a>
         </div>
       </div>
 
-      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-1">Places to Stay</a>
-      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-1">Places to go</a>
-      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-1">Events</a>
-      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-1">Plan Your Trip</a>
+      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-2 border-b border-emerald-900/60">Places to Stay</a>
+      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-2 border-b border-emerald-900/60">Places to go</a>
+      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-2 border-b border-emerald-900/60">Events</a>
+      <a href="#" class="block text-stone-200 hover:text-amber-400 font-semibold py-2">Plan Your Trip</a>
     </div>
   </header>
 
@@ -97,7 +99,7 @@
 
   <!-- Interactive Scripts -->
   <script>
-    // Main Mobile Menu Toggle
+    // Main Mobile Hamburger Menu Toggle
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     const icon = document.getElementById('menu-icon');
@@ -116,9 +118,26 @@
     const mobileSubmenu = document.getElementById('mobile-submenu');
     const mobileChevron = document.getElementById('mobile-chevron');
 
-    mobileDropdownBtn.addEventListener('click', () => {
+    mobileDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileSubmenu.classList.toggle('hidden');
       mobileChevron.classList.toggle('rotate-180');
+    });
+
+    // Desktop Click Backup Toggle (in case touch/hover acts quirky on tablets)
+    const desktopBtn = document.getElementById('desktop-dropdown-btn');
+    const desktopMenu = document.getElementById('desktop-dropdown-menu');
+
+    desktopBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      desktopMenu.classList.toggle('hidden');
+    });
+
+    // Close desktop menu if clicking anywhere else on page
+    window.addEventListener('click', () => {
+      if (!desktopMenu.classList.contains('hidden')) {
+        desktopMenu.classList.add('hidden');
+      }
     });
   </script>
 
